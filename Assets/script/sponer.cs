@@ -19,11 +19,13 @@ public class sponer : MonoBehaviour
     // Update is called once per frame      2,-8.5f
     void Update()
     {
+        timer += Time.deltaTime;
 
         if (time < timer||enemysuu<2)
         {
             Instantiate(enemy[0], new Vector2(Random.Range(2.0f, -8.5f), 9), transform.rotation);
             enemysuu++;
+            timer = 0.0f;
         }
         //Instantiate(tama, ShotPoint.position, ShotPoint.rotation);
     }

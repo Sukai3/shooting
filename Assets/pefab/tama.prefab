@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890e59d54277685428c5d8ec2c219800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::tama
-  speed: 11.09
+  xspeed: 5
+  yspeed: 0
 --- !u!50 &6885451678909644172
 Rigidbody2D:
   serializedVersion: 5

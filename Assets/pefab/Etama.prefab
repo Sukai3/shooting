@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5734495077173155687}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.46, y: 2.81, z: 0}
   m_LocalScale: {x: 0.40603, y: 0.40603, z: 0.40603}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &423493468366436388
 SpriteRenderer:
   serializedVersion: 2
@@ -141,4 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890e59d54277685428c5d8ec2c219800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::tama
-  speed: 5
+  xspeed: 0
+  yspeed: 1.45
+  playermuke: 1
+  player: {fileID: 8950746993129655948, guid: baa9694ad892f2a4198cda30582cf2d2, type: 3}

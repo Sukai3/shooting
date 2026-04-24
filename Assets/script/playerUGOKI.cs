@@ -26,6 +26,8 @@ public class playerUGOKI : MonoBehaviour
             transform.position = new Vector2(transform.position.x, 4.0f);
         if (transform.position.x < -8.4)
             transform.position = new Vector2(-8.4f, transform.position.y);
+        if (transform.position.x > 1.75)
+            transform.position = new Vector2(1.75f, transform.position.y);
 
     }
 }
