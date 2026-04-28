@@ -1,20 +1,21 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class tama : MonoBehaviour
 {
     public float xspeed = 5.0f;
     public float yspeed = 0;
     public bool playermuke;
+    //public Transform player;
   //  public Transform player;
     void Start()
     {
-        //if (playermuke) 
-        //{
-        //    xspeed= (transform.position.x-player.position.x);
-        //    yspeed= (transform.position.y-player.position.y);
-        //}
+        if (playermuke)
+        {
+           // transform.LookAt(player);
+        }
 
-        //transform.LookAt(target);
+        //
     }
 
     // Update is called once per frame

@@ -707,7 +707,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.014840364, y: -0.034998506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -717,7 +717,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.4756335, y: 0.24870327}
   m_EdgeRadius: 0
 --- !u!212 &1123856990
 SpriteRenderer:
@@ -786,14 +786,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123856987}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.0026520686, y: -0, z: -0, w: 0.9999965}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.925959, y: 1.9632287, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1639900427}
   m_Father: {fileID: 120433465}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.304, y: 0, z: 0}
 --- !u!114 &1123856992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94bef96c55a516141b6e78944008aecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player
+  i: SampleScene
   tama: {fileID: 1866227303264125921, guid: 19eb1e446d0416141a08e984929ac405, type: 3}
   ShotPoint: {fileID: 1639900427}
   timer: 0

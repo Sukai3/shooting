@@ -12,7 +12,7 @@ using UnityEngine.UIElements;
 public class player : MonoBehaviour
 {
 
-   
+    public string i = "SampleScene";
     public GameObject tama;
     public Transform ShotPoint;
     public float timer = 0.0f;
@@ -108,8 +108,24 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ETama"))
         {
-            bunnsinn--;
-            Destroy(collision.gameObject);
+            if (bunnsinn <= 0)
+            {
+                SceneManager.LoadScene(i);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                bunnsinn--;
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
+  //切り替えるシーンの名前
+    
+    // Start is called before the first frame update
+   
+// Update is called once per frame
+
+   
+        
