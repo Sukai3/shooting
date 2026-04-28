@@ -59,7 +59,7 @@ public class enemy : MonoBehaviour
         {
             Destroy(gameObject);
             if (Random.Range(0, 2) == 0)
-                player.bunnsinn += 1;
+                player.bunnsinn += 10;
             sponer.enemysuu--;
             //Instantiate(item, transform.position, transform.rotation);
         }

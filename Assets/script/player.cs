@@ -25,6 +25,8 @@ public class player : MonoBehaviour
     public TextMeshProUGUI textMeshPro;
     public float interval = 1;
     private float shokiintrval;
+    private int kougo=0;
+    private int kyoka = 0;
 
     void Start()
     {
@@ -42,13 +44,39 @@ public class player : MonoBehaviour
           
             shot();
         textMeshPro.text =""+bunnsinn;
-        if (Input.GetKeyDown(KeyCode.B)&&bunnsinn>=2&&kyokasuu<6)
+        if (Input.GetKeyDown(KeyCode.B) && bunnsinn >= 2 && kyoka<6)
         {
-            atk++;
+            bunnsinn -= 2;
+            kyoka++;
+            if (kougo == 0)
+            {
+                kougo++;
+                atk++;
+            }
+            else
+            {
+                kougo = 0;
+                interval += 0.4f;
+                shokiintrval += 0.4f;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.B)&&bunnsinn>=2&&kyokasuu<6)
+        {
+            
             bunnsinn -= 2;
             kyokatimer = 0;
-            interval += 0.4f;
             kyokasuu++;
+            if (kougo == 0)
+            {
+                kougo++;
+                atk++;
+            }
+            else
+            {
+                kougo=0;
+                interval += 0.4f;
+            }
+
         }
         if (kyokatimer >= kyokatime) 
         {
@@ -56,6 +84,10 @@ public class player : MonoBehaviour
             atk = 1;
             interval = shokiintrval;
         }
+        if (Input.GetKeyDown(KeyCode.K))
+            bunnsinn -= 6;
+        if (Input.GetKeyDown(KeyCode.J))
+            bunnsinn += 6;
     }
 
 

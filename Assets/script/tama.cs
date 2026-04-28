@@ -13,6 +13,8 @@ public class tama : MonoBehaviour
         //    xspeed= (transform.position.x-player.position.x);
         //    yspeed= (transform.position.y-player.position.y);
         //}
+
+        //transform.LookAt(target);
     }
 
     // Update is called once per frame
