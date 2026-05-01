@@ -14,6 +14,7 @@ public class player : MonoBehaviour
 
     public string i = "SampleScene";
     public GameObject tama;
+    public GameObject bom;
     public Transform ShotPoint;
     public float timer = 0.0f;
     public float kyokatime = 30;
@@ -43,6 +44,8 @@ public class player : MonoBehaviour
         kyokatimer += Time.deltaTime;
           
             shot();
+        if (Input.GetKeyDown(KeyCode.X))// && bunnsinn >= 2 && kyoka < 6)
+            Instantiate(bom, ShotPoint.position, ShotPoint.rotation);
         textMeshPro.text =""+bunnsinn;
         if (Input.GetKeyDown(KeyCode.B) && bunnsinn >= 2 && kyoka<6)
         {
