@@ -3,19 +3,23 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    public int speed = 2;
+    public float speed = 2;
     public float HP = 3;
-    public float timer = 0.0f;
-    private float time = 2.5f;
+    private float timer = 0.0f;
+    public float kirikaesitime = 2.5f;
     private float shottimer = 0.0f;
     public float shottime=2;
-    private int yoko = 2;
+    public float yoko = 2;
     private float gendo;
     public GameObject tama;
     public int pattern=0;
+    public float bomdamage=10;
+    public int rand;
     //public GameObject item;
     void Start()
     {
+        if (Random.Range(0, 5) == 1)
+            pattern = 1;
         gendo = Random.Range(4.3f, 1.5f);
         if (Random.Range(0, 2) == 0)
             yoko *=-1;
@@ -25,14 +29,14 @@ public class enemy : MonoBehaviour
     void Update()
     {
         if (transform.position.y >= gendo)
-            transform.Translate(new Vector3(0, speed, 0) * Time.deltaTime);
+            transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime);
         else
         {
             timer += Time.deltaTime;
             shottimer += Time.deltaTime;
           
-            transform.Translate(new Vector3(yoko, 0, 0) * Time.deltaTime);
-            if(time < timer)
+            transform.Translate(new Vector3(yoko, speed, 0) * Time.deltaTime);
+            if(kirikaesitime < timer)
             {
                 yoko *= -1;
                 timer = 0;
@@ -64,9 +68,12 @@ public class enemy : MonoBehaviour
         }
         if (HP <= 0)
         {
+            rand = Random.Range(0, 10)+1;
             Destroy(gameObject);
-            if (Random.Range(0, 2) == 0)
-                player.bunnsinn += 10;
+            if ( rand>= 4)
+                player.bunnsinn += 1;
+            else if ( rand>= 2)
+                player.bunnsinn += 2;
             sponer.enemysuu--;
             //Instantiate(item, transform.position, transform.rotation);
         }
@@ -78,6 +85,16 @@ public class enemy : MonoBehaviour
             HP-=player.atk;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("Bom"))
+        {
+            HP -= bomdamage;
+           
+        }
+        if (collision.gameObject.CompareTag("Enemykill"))
+        {
+            Destroy(gameObject);
+            sponer.enemysuu--;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -85,6 +102,16 @@ public class enemy : MonoBehaviour
         {
             HP -= player.atk;
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Bom"))
+        {
+            HP -= bomdamage;
+           
+        }
+        if (collision.gameObject.CompareTag("Enemykill"))
+        {
+            Destroy(gameObject);
+            sponer.enemysuu--;
         }
     }
 

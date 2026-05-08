@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6011292388785680057}
   m_Layer: 0
   m_Name: enemy (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,8 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa038ef65240b04ab74c3b8eebf3d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemy
-  speed: 2
+  speed: 0.2
   HP: 3
-  timer: 0
+  kirikaesitime: 3.42
   shottime: 2.54
+  yoko: 1.54
   tama: {fileID: 5734495077173155687, guid: 988663b6d920734438538438626eae74, type: 3}
+  pattern: 0
+  bomdamage: 10
+  rand: 0

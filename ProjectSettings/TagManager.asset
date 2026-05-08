@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Tama
   - ETama
+  - Bom
+  - Enemy
+  - Enemykill
   layers:
   - Default
   - TransparentFX

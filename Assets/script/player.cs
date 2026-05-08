@@ -19,15 +19,18 @@ public class player : MonoBehaviour
     public float timer = 0.0f;
     public float kyokatime = 30;
     public float kyokatimer = 0.0f;
+    private float bomtimer=8.0f;
     public int kyokasuu = 0;
     public float time =1.0f;
     public static float atk=1;
     public static int bunnsinn = 0;
     public TextMeshProUGUI textMeshPro;
     public float interval = 1;
+    public float bominterval = 7;
     private float shokiintrval;
     private int kougo=0;
     private int kyoka = 0;
+    public int cost = 2;
 
     void Start()
     {
@@ -41,13 +44,17 @@ public class player : MonoBehaviour
     {
 
         timer += Time.deltaTime;
+        bomtimer += Time.deltaTime;
         kyokatimer += Time.deltaTime;
           
             shot();
-        if (Input.GetKeyDown(KeyCode.X))// && bunnsinn >= 2 && kyoka < 6)
+        if (Input.GetKeyDown(KeyCode.X) && bunnsinn >= 2 && bomtimer > bominterval)
+        {
+            bomtimer = 0.0f;
             Instantiate(bom, ShotPoint.position, ShotPoint.rotation);
+        }
         textMeshPro.text =""+bunnsinn;
-        if (Input.GetKeyDown(KeyCode.B) && bunnsinn >= 2 && kyoka<6)
+        if (Input.GetKeyDown(KeyCode.B) && bunnsinn >= cost && kyoka<6)
         {
             bunnsinn -= 2;
             kyoka++;
