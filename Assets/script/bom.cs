@@ -99,7 +99,7 @@ public class bom : MonoBehaviour
                     rota *= -1;
                 transform.rotation = Quaternion.Euler(0, 0, rota);
             }
-            if (transform.position.x > 1.75)
+            if (transform.position.x > 8.3)
             {
                 // transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
                 transform.position = new Vector2(1.75f, transform.position.y);

@@ -129,6 +129,22 @@ public class player : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
+            if (bunnsinn <= 0)
+            {
+                SceneManager.LoadScene(i);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                bunnsinn--;
+                sponer.enemysuu--;
+                Destroy(collision.gameObject);
+            }
+           
+        }
     }
 }
   //切り替えるシーンの名前

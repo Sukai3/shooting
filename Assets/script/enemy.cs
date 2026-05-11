@@ -41,9 +41,9 @@ public class enemy : MonoBehaviour
                 yoko *= -1;
                 timer = 0;
             }
-            if ( transform.position.x >= 2) 
+            if ( transform.position.x >= 8) 
             {
-                transform.position=new Vector3(1.9f, transform.position.y,0);
+                transform.position=new Vector3(8f, transform.position.y,0);
                 yoko *= -1;
                 timer = 0;
             }
