@@ -21,16 +21,16 @@ public class bosatk : MonoBehaviour
         if (time < timer&& pattern==0)
         {
             timer = 0;
-            Instantiate(Danmaku, new Vector2(Random.Range(2.0f, -8.5f), 1), Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
+            Instantiate(Danmaku, new Vector2(Random.Range(8f, -8.5f), 1), Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
         }
         if (time < timer && pattern == 1)
         {
             timer = 0;
             rnd = Random.Range(2.0f, -8.5f);
-            for (int i = 0; i <= 24; i++) 
+            for (int i = 0; i <= 16; i++) 
             {
                 
-                Instantiate(Danmaku, new Vector2(rnd,2f), Quaternion.Euler(0, 0, i * 15));
+                Instantiate(Danmaku, new Vector2(rnd,2f), Quaternion.Euler(0, 0, i * 22.5f));
             }
         }
     }
