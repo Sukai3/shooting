@@ -56,7 +56,7 @@ public class enemy : MonoBehaviour
 
             if (shottimer > shottime&&pattern==0)
             {
-                Instantiate(tama[0], transform.position, transform.rotation);
+                Instantiate(tama[0], transform.position, Quaternion.Euler(0, 0,0));
                 shottimer = 0;
             }
             if (shottimer > shottime && pattern == 1) 
