@@ -31,6 +31,7 @@ public class player : MonoBehaviour
     private int kougo=0;
     private int kyoka = 0;
     public int cost = 2;
+    public static float bomdamage = 10;
 
     void Start()
     {

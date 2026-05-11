@@ -13,8 +13,9 @@ public class enemy : MonoBehaviour
     private float gendo;
     public GameObject[] tama;
     public int pattern=0;
-    public float bomdamage=10;
+    
     public int rand;
+  
     //public GameObject item;
     void Start()
     {
@@ -87,7 +88,7 @@ public class enemy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bom"))
         {
-            HP -= bomdamage;
+            HP -= player.bomdamage;
            
         }
         if (collision.gameObject.CompareTag("Enemykill"))
@@ -105,7 +106,7 @@ public class enemy : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bom"))
         {
-            HP -= bomdamage;
+            HP -= player.bomdamage;
            
         }
         if (collision.gameObject.CompareTag("Enemykill"))
