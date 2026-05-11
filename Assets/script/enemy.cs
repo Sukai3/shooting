@@ -11,7 +11,7 @@ public class enemy : MonoBehaviour
     public float shottime=2;
     public float yoko = 2;
     private float gendo;
-    public GameObject tama;
+    public GameObject[] tama;
     public int pattern=0;
     public float bomdamage=10;
     public int rand;
@@ -56,13 +56,13 @@ public class enemy : MonoBehaviour
 
             if (shottimer > shottime&&pattern==0)
             {
-                Instantiate(tama, transform.position, transform.rotation);
+                Instantiate(tama[0], transform.position, transform.rotation);
                 shottimer = 0;
             }
             if (shottimer > shottime && pattern == 1) 
             {
                 for(int i=0;i<3;i++)
-                Instantiate(tama, transform.position, Quaternion.Euler(0, 0, i*45-45+180));
+                    Instantiate(tama[1], transform.position, Quaternion.Euler(0, 0, i*45-45+180));
                 shottimer = 0;
             }
         }
