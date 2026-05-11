@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 406905401131720421}
   - component: {fileID: -9043395572880698794}
   m_Layer: 0
-  m_Name: bostama
+  m_Name: bostama 1
   m_TagString: ETama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::tama
   xspeed: 0
-  yspeed: 1.9
+  yspeed: 2.45
   pxspeed: 0
   pyspeed: 0
   playermuke: 1
