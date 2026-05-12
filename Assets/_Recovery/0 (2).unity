@@ -2175,9 +2175,9 @@ MonoBehaviour:
   - {fileID: 5734495077173155687, guid: 6b5fb9e009f2021489a827ba127d599c, type: 3}
   - {fileID: 5734495077173155687, guid: 12a9e3280d4537047a8aeb3ac0c750e0, type: 3}
   Ptime: 10
-  shokisponetime: 0.5
+  shokisponetime: 2.6
   time: 0.1
-  pattern: 0
+  pattern: 3
   rnd: 0
   HP: 100
   kakudo: 0

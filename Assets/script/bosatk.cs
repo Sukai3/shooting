@@ -1,22 +1,26 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.U2D.IK;
 
 public class bosatk : MonoBehaviour
 {
     public GameObject[] Danmaku;
     private float timer=0.0f;
-    private float Stimer = 0.0f;
+    private  float Stimer = 0.0f;
     private float Ptimer=0.0f;
     public float Ptime = 10;
-    public float sponetime = 10;
+    public float shokisponetime = 120;
+    public static float sponetime = 20;
     public float time=0;
     public int pattern = 0;
     public float rnd;
     public float HP = 100;
+    public float kakudo=0;
+    public float sum=0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        sponetime = shokisponetime;
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class bosatk : MonoBehaviour
             if (time < timer && pattern == 0)
             {
                 timer = 0;
-                time = 0.7f;
+                time = 0.4f;
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(90f, 270f)));
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(90f, 270f)));
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(270, 450)));
@@ -61,6 +65,7 @@ public class bosatk : MonoBehaviour
                 Instantiate(Danmaku[2], new Vector2(Random.Range(-8.0f, 8.0f), 5f), transform.rotation);
 
             }
+          
         }
     }
             private void OnTriggerEnter2D(Collider2D collision)
