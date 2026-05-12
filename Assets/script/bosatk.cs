@@ -6,6 +6,8 @@ public class bosatk : MonoBehaviour
     public GameObject[] Danmaku;
     private float timer=0.0f;
     private float Stimer = 0.0f;
+    private float Ptimer=0.0f;
+    public float Ptime = 10;
     public float sponetime = 10;
     public float time=0;
     public int pattern = 0;
@@ -36,7 +38,8 @@ public class bosatk : MonoBehaviour
             if (time < timer && pattern == 0)
             {
                 timer = 0;
-                time = 1.4f;
+                time = 0.7f;
+                Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(90f, 270f)));
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(90f, 270f)));
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(270, 450)));
             }

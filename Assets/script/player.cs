@@ -31,6 +31,7 @@ public class player : MonoBehaviour
     private int kougo=0;
     private int kyoka = 0;
     public int cost = 2;
+    public int costpl = 1;
     public static float bomdamage = 10;
 
     void Start()
@@ -51,13 +52,15 @@ public class player : MonoBehaviour
             shot();
         if (Input.GetKeyDown(KeyCode.X) && bunnsinn >= 2 && bomtimer > bominterval)
         {
+            
             bomtimer = 0.0f;
             Instantiate(bom, ShotPoint.position, ShotPoint.rotation);
         }
         textMeshPro.text =""+bunnsinn;
         if (Input.GetKeyDown(KeyCode.B) && bunnsinn >= cost && kyoka<6)
         {
-            bunnsinn -= 2;
+           
+            bunnsinn -= cost;
             kyoka++;
             if (kougo == 0)
             {
@@ -70,11 +73,12 @@ public class player : MonoBehaviour
                 interval += 0.4f;
                 shokiintrval += 0.4f;
             }
+            cost += costpl;
         }
-        else if (Input.GetKeyDown(KeyCode.B)&&bunnsinn>=2&&kyokasuu<6)
+        else if (Input.GetKeyDown(KeyCode.B)&&bunnsinn>=cost&&kyokasuu<6)
         {
-            
-            bunnsinn -= 2;
+           
+            bunnsinn -= cost;
             kyokatimer = 0;
             kyokasuu++;
             if (kougo == 0)
@@ -87,7 +91,7 @@ public class player : MonoBehaviour
                 kougo=0;
                 interval += 0.4f;
             }
-
+            cost += costpl;
         }
         if (kyokatimer >= kyokatime) 
         {
