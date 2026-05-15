@@ -13,13 +13,15 @@ public class enemy : MonoBehaviour
     private float gendo;
     public GameObject[] tama;
     public int pattern=0;
-    AudioSource audioSource;
+   
     public AudioClip sound1;
+    AudioSource audioSource;
     public int rand;
   
     //public GameObject item;
     void Start()
     {
+
         if (Random.Range(0, 5) == 1)
             pattern = 1;
         gendo = Random.Range(4.3f, 1.5f);
@@ -73,6 +75,7 @@ public class enemy : MonoBehaviour
             rand = Random.Range(0, 10)+1;
             audioSource.PlayOneShot(sound1);
             Destroy(gameObject);
+           
             if ( rand>= 4)
                 player.bunnsinn += 1;
             else if ( rand>= 2)

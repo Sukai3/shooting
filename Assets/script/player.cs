@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+
 
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -41,13 +43,19 @@ public class player : MonoBehaviour
     public AudioClip sound6;
     public static float bomdamage = 10;
     AudioSource audioSource;
-
+    private float killtimer = 0.0f;
+    private float killtime = 3.0f;
+    public float hozonintrval;
     void Start()
     {
         //  animator =GetComponent<Animator>();
-        shokiintrval = interval;
+        interval  = hozonintrval;
+        shokiintrval = hozonintrval;
         audioSource = GetComponent<AudioSource>();
 
+        atk = 1;
+        bunnsinn = 0;
+        bomdamage = 10;
     }
 
     // Update is called once per frame
@@ -57,8 +65,13 @@ public class player : MonoBehaviour
         timer += Time.deltaTime;
         bomtimer += Time.deltaTime;
         kyokatimer += Time.deltaTime;
-          
-            shot();
+        if (bosatk.kill)
+            killtimer += Time.deltaTime;
+        if (killtimer >= killtime)
+            SceneManager.LoadScene("Mresult");
+
+        shot();
+
         if (Input.GetKeyDown(KeyCode.X) && bunnsinn >= 2 && bomtimer > bominterval)
         {
             audioSource.PlayOneShot(sound5);

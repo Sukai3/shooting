@@ -1,5 +1,6 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.U2D.IK;
 
 public class bosatk : MonoBehaviour
@@ -14,13 +15,17 @@ public class bosatk : MonoBehaviour
     public float time=0;
     public int pattern = 0;
     public float rnd;
-    public float HP = 100;
+    public float HP = 300;
     public float kakudo=0;
     public float sum=0;
+    public static  bool kill=false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        kill = false;
         sponetime = shokisponetime;
+       
     }
 
     // Update is called once per frame
@@ -28,10 +33,13 @@ public class bosatk : MonoBehaviour
     {
         timer += Time.deltaTime;
         Stimer += Time.deltaTime;
+      
         if (HP <= 0)
         {
-            Destroy(gameObject);
+           Destroy(gameObject);
+           kill=true;
         }
+       
         if (Stimer >= sponetime)
         {
             if (transform.position.y >= 4)
