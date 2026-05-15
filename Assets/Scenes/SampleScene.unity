@@ -2038,6 +2038,8 @@ MonoBehaviour:
   sound2: {fileID: 8300000, guid: 524d3d410b86acb49973f0d41f554190, type: 3}
   sound3: {fileID: 8300000, guid: 5b55b46023bf14b4bb1c4884f88ab5b4, type: 3}
   sound4: {fileID: 8300000, guid: 994a5f57101f08640a73d4ffaa660c03, type: 3}
+  sound5: {fileID: 8300000, guid: 6a8421f4c7af66f40bc8b5cf3a1b0431, type: 3}
+  sound6: {fileID: 0}
 --- !u!50 &1123856993
 Rigidbody2D:
   serializedVersion: 5

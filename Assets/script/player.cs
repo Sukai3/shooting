@@ -37,6 +37,8 @@ public class player : MonoBehaviour
     public AudioClip sound2;
     public AudioClip sound3;
     public AudioClip sound4;
+    public AudioClip sound5;
+    public AudioClip sound6;
     public static float bomdamage = 10;
     AudioSource audioSource;
 
@@ -59,7 +61,7 @@ public class player : MonoBehaviour
             shot();
         if (Input.GetKeyDown(KeyCode.X) && bunnsinn >= 2 && bomtimer > bominterval)
         {
-            
+            audioSource.PlayOneShot(sound5);
             bomtimer = 0.0f;
             Instantiate(bom, ShotPoint.position, ShotPoint.rotation);
         }
