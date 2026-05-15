@@ -21,7 +21,7 @@ public class enemy : MonoBehaviour
     //public GameObject item;
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
         if (Random.Range(0, 5) == 1)
             pattern = 1;
         gendo = Random.Range(4.3f, 1.5f);
