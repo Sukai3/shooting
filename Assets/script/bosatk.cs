@@ -9,7 +9,9 @@ public class bosatk : MonoBehaviour
     private float timer=0.0f;
     private  float Stimer = 0.0f;
     private float Ptimer=0.0f;
-    public float Ptime = 10;
+    public float Ptime = 20;
+    public float Utime = 5;
+    public bool kyukei = false;
     public float shokisponetime = 120;
     public static float sponetime = 20;
     public float time=0;
@@ -19,6 +21,7 @@ public class bosatk : MonoBehaviour
     public float kakudo=0;
     public float sum=0;
     public static  bool kill=false;
+    public int Maxpattern;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,6 +50,21 @@ public class bosatk : MonoBehaviour
         }
         if (transform.position.y <= 4)
         {
+
+            Ptimer += Time.deltaTime;
+            if (Ptimer > Ptime&&!kyukei) 
+            {
+                Ptimer = 0;
+                pattern = -1;
+                kyukei = true;
+            }
+            if (Ptimer > Utime && kyukei) 
+            {
+                Ptimer = 0;
+                kyukei = false;
+                pattern = Random.Range(0, Maxpattern+1);
+            }
+
             if (time < timer && pattern == 0)
             {
                 timer = 0;

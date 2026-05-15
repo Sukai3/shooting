@@ -17,7 +17,9 @@ public class enemy : MonoBehaviour
     public AudioClip sound1;
     AudioSource audioSource;
     public int rand;
-  
+    private float killtimer = 0.0f;
+    private float killtime = 3.0f;
+    private bool kill = false;
     //public GameObject item;
     void Start()
     {
@@ -32,7 +34,11 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y >= gendo)
+        if (kill)
+            killtimer += Time.deltaTime;
+        if (killtimer >= killtime)
+            Destroy(gameObject);
+            if (transform.position.y >= gendo)
             transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime);
         else
         {
@@ -70,11 +76,12 @@ public class enemy : MonoBehaviour
                 shottimer = 0;
             }
         }
-        if (HP <= 0)
+        if (HP <= 0&&!kill)
         {
+            transform.position = new Vector3(10, -8, 5);
+            kill = true;
             rand = Random.Range(0, 10)+1;
             audioSource.PlayOneShot(sound1);
-            Destroy(gameObject);
            
             if ( rand>= 4)
                 player.bunnsinn += 1;
