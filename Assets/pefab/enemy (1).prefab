@@ -188,5 +188,5 @@ MonoBehaviour:
   - {fileID: 5734495077173155687, guid: 988663b6d920734438538438626eae74, type: 3}
   - {fileID: 5734495077173155687, guid: b10a0971fcebfb146970dc567b07daf7, type: 3}
   pattern: 0
-  bomdamage: 10
+  sound1: {fileID: 8300000, guid: 0562ba5e6144d6344b31beab59b78b3c, type: 3}
   rand: 0

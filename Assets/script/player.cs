@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
@@ -32,12 +33,18 @@ public class player : MonoBehaviour
     private int kyoka = 0;
     public int cost = 2;
     public int costpl = 1;
+    public AudioClip sound1;
+    public AudioClip sound2;
+    public AudioClip sound3;
+    public AudioClip sound4;
     public static float bomdamage = 10;
+    AudioSource audioSource;
 
     void Start()
     {
         //  animator =GetComponent<Animator>();
         shokiintrval = interval;
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -77,7 +84,7 @@ public class player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.B)&&bunnsinn>=cost&&kyokasuu<6)
         {
-           
+            audioSource.PlayOneShot(sound4);
             bunnsinn -= cost;
             kyokatimer = 0;
             kyokasuu++;
@@ -113,6 +120,7 @@ public class player : MonoBehaviour
     {
         if (timer > time/interval)
         {
+            audioSource.PlayOneShot(sound1);
             Instantiate(tama, ShotPoint.position, ShotPoint.rotation);
             timer = 0;
         }
@@ -125,11 +133,13 @@ public class player : MonoBehaviour
         {
             if (bunnsinn <= 0)
             {
+                audioSource.PlayOneShot(sound2);
                 SceneManager.LoadScene(i);
                 Destroy(collision.gameObject);
             }
             else
             {
+                audioSource.PlayOneShot(sound3);
                 bunnsinn--;
                 Destroy(collision.gameObject);
             }
@@ -139,11 +149,13 @@ public class player : MonoBehaviour
 
             if (bunnsinn <= 0)
             {
+                audioSource.PlayOneShot(sound2);
                 SceneManager.LoadScene(i);
                 Destroy(collision.gameObject);
             }
             else
             {
+                audioSource.PlayOneShot(sound3);
                 bunnsinn--;
                 sponer.enemysuu--;
                 Destroy(collision.gameObject);
