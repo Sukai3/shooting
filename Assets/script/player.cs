@@ -46,6 +46,7 @@ public class player : MonoBehaviour
     private float killtimer = 0.0f;
     private float killtime = 3.0f;
     public float hozonintrval;
+    
     void Start()
     {
         //  animator =GetComponent<Animator>();

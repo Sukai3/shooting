@@ -10,6 +10,8 @@ public class sponer : MonoBehaviour
     public float Stimer = 0.0f;
     public float time = 5.0f;
     public static int enemysuu=0;
+    public static int enemysum = 0;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,18 +25,21 @@ public class sponer : MonoBehaviour
         timer += Time.deltaTime;
         Stimer += Time.deltaTime;
 
-        if ( Stimer < bosatk.sponetime - 10&&time < timer)
+        if ( Stimer < bosatk.sponetime - 15&&time < timer)
         {
             Instantiate(enemy[0], new Vector2(Random.Range(8f, -8.5f), 9), transform.rotation);
             enemysuu++;
             timer = 0.0f;
+            enemysum++;
         }
-        if (Stimer < bosatk.sponetime - 10 &&enemysuu < 2)
+        if (Stimer < bosatk.sponetime - 15 &&enemysuu < 2)
         {
             Instantiate(enemy[0], new Vector2(Random.Range(8f, -8.5f), 9), transform.rotation);
             enemysuu++;
             timer = 0.0f;
+            enemysum++;
         }
+
         //Instantiate(tama, ShotPoint.position, ShotPoint.rotation);
     }
 }
