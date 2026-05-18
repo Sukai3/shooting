@@ -2494,6 +2494,7 @@ GameObject:
   - component: {fileID: 1825581341}
   - component: {fileID: 1825581340}
   - component: {fileID: 1825581339}
+  - component: {fileID: 1825581343}
   m_Layer: 0
   m_Name: crone (1)
   m_TagString: Untagged
@@ -2663,6 +2664,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &1825581343
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825581337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6eef496c210149d4288d474751baeca7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1840785212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,6 +2853,7 @@ GameObject:
   - component: {fileID: 2013492593}
   - component: {fileID: 2013492592}
   - component: {fileID: 2013492596}
+  - component: {fileID: 2013492597}
   m_Layer: 0
   m_Name: crone
   m_TagString: Untagged
@@ -2999,6 +3023,28 @@ MonoBehaviour:
   time: 1
   banngou: 1
   tama: {fileID: 1866227303264125921, guid: af0efcc3b133ac04b84c57f9fce96667, type: 3}
+--- !u!95 &2013492597
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013492591}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 967cce4030eb463449f2d06dc57c8ca6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2027467369
 GameObject:
   m_ObjectHideFlags: 0
