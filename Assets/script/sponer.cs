@@ -16,7 +16,8 @@ public class sponer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        enemysuu = 0;
+        enemysum = 0;
     }
 
     // Update is called once per frame      2,-8.5f
