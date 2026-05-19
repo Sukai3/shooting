@@ -45,8 +45,8 @@ public class bosatk : MonoBehaviour
        
         if (Stimer >= sponetime)
         {
-            if (transform.position.y >= 4)
-                transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime);
+            if (transform.position.y >= 2.57)
+                transform.Translate(new Vector3(0, -2, 0) * Time.deltaTime);
         }
         if (transform.position.y <= 4)
         {
