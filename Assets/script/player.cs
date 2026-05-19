@@ -55,7 +55,7 @@ public class player : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         atk = 1;
-        bunnsinn = 0;
+        bunnsinn = 5;
         bomdamage = 10;
     }
 
