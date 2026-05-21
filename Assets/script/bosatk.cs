@@ -1,7 +1,4 @@
-using System.Threading;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.U2D.IK;
 
 public class bosatk : MonoBehaviour
 {

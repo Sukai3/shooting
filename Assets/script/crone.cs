@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 
 public class crone : MonoBehaviour
