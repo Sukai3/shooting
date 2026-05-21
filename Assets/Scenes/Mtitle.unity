@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b2a11c55d90e844b6f96bb55ff6d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mscenechange
-  nextscene: SampleScene
+  nextscene: Mselect
 --- !u!1 &1321723104
 GameObject:
   m_ObjectHideFlags: 0

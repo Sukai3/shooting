@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::tama
   xspeed: 0
-  yspeed: 1.9
+  yspeed: 3
   pxspeed: 0
   pyspeed: 0
   playermuke: 1

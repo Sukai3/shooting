@@ -87,6 +87,7 @@ public class bosatk : MonoBehaviour
                 time = 0.2f;
                 Instantiate(Danmaku[2], new Vector2(Random.Range(-8.0f, 8.0f), 5f), transform.rotation);
 
+
             }
           
         }
