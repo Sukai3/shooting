@@ -59,7 +59,7 @@ public class bosatk : MonoBehaviour
             {
                 Ptimer = 0;
                 kyukei = false;
-                pattern = Random.Range(0, Maxpattern+1);
+                pattern = Random.Range(0, Danmaku.Length);
             }
 
             if (time < timer && pattern == 0)
@@ -89,7 +89,15 @@ public class bosatk : MonoBehaviour
 
 
             }
-          
+            if (time < timer && pattern == 3)
+            {
+                timer = 0;
+                time = 1f;
+                Instantiate(Danmaku[3], transform.position, Quaternion.Euler(0, 0,0));
+
+
+            }
+
         }
     }
             private void OnTriggerEnter2D(Collider2D collision)
