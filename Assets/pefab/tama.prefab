@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890e59d54277685428c5d8ec2c219800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::tama
-  xspeed: 5
+  xspeed: 7.74
   yspeed: 0
   pxspeed: 0
   pyspeed: 0

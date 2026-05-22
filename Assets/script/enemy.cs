@@ -106,10 +106,12 @@ public class enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Tama")) 
         {
             HP-=player.atk;
+            anim.SetTrigger("hidan");
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Bom"))
         {
+            anim.SetTrigger("hidan");
             HP -= player.bomdamage;
            
         }
@@ -124,12 +126,13 @@ public class enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Tama"))
         {
             HP -= player.atk;
+            anim.SetTrigger("hidan");
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Bom"))
         {
             HP -= player.bomdamage;
-           
+            anim.SetTrigger("hidan");
         }
         if (collision.gameObject.CompareTag("Enemykill"))
         {

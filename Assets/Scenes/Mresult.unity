@@ -588,6 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287817295}
   - component: {fileID: 1287817294}
+  - component: {fileID: 1287817296}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -669,6 +670,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1287817296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287817293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b2a11c55d90e844b6f96bb55ff6d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mscenechange
+  nextscene: Mselect
 --- !u!1 &1355714157
 GameObject:
   m_ObjectHideFlags: 0

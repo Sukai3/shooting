@@ -29,10 +29,10 @@ public class Number : MonoBehaviour
                 thou = (player.bunnsinn / 1000) % 10;
                 break;
             case 2:
-                one = sponer.enemysuu % 10;
-                ten = (sponer.enemysuu / 10) % 10;
-                hund = (sponer.enemysuu / 100) % 10;
-                thou = (sponer.enemysuu / 1000) % 10;
+                one = sponer.enemysum % 10;
+                ten = (sponer.enemysum / 10) % 10;
+                hund = (sponer.enemysum / 100) % 10;
+                thou = (sponer.enemysum / 1000) % 10;
                 break;
             case 3:
 
