@@ -24,7 +24,7 @@ public class sponer : MonoBehaviour
         timer += Time.deltaTime;
         Stimer += Time.deltaTime;
 
-        if ( Stimer < bosatk.sponetime - 15&&time < timer)
+        if ( Stimer < bosatk.sponetime - 15&&time*(17/Stimer) < timer)
         {
             Instantiate(enemy[0], new Vector2(Random.Range(8f, -8.5f), 9), transform.rotation);
             enemysuu++;

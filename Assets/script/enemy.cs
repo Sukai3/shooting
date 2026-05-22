@@ -103,42 +103,48 @@ public class enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Tama")) 
+        if (!kill)
         {
-            HP-=player.atk;
-            anim.SetTrigger("hidan");
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("Bom"))
-        {
-            anim.SetTrigger("hidan");
-            HP -= player.bomdamage;
-           
-        }
-        if (collision.gameObject.CompareTag("Enemykill"))
-        {
-            Destroy(gameObject);
-            sponer.enemysuu--;
+            if (collision.gameObject.CompareTag("Tama"))
+            {
+                HP -= player.atk;
+                anim.SetTrigger("hidan");
+                Destroy(collision.gameObject);
+            }
+            if (collision.gameObject.CompareTag("Bom"))
+            {
+                anim.SetTrigger("hidan");
+                HP -= player.bomdamage;
+
+            }
+            if (collision.gameObject.CompareTag("Enemykill"))
+            {
+                Destroy(gameObject);
+                sponer.enemysuu--;
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Tama"))
+        if (!kill)
         {
-            HP -= player.atk;
-            anim.SetTrigger("hidan");
-            Destroy(collision.gameObject);
+            if (collision.gameObject.CompareTag("Tama"))
+            {
+                HP -= player.atk;
+                anim.SetTrigger("hidan");
+                Destroy(collision.gameObject);
+            }
+            if (collision.gameObject.CompareTag("Bom"))
+            {
+                HP -= player.bomdamage;
+                anim.SetTrigger("hidan");
+            }
+            if (collision.gameObject.CompareTag("Enemykill"))
+            {
+                Destroy(gameObject);
+                sponer.enemysuu--;
+            }
         }
-        if (collision.gameObject.CompareTag("Bom"))
-        {
-            HP -= player.bomdamage;
-            anim.SetTrigger("hidan");
         }
-        if (collision.gameObject.CompareTag("Enemykill"))
-        {
-            Destroy(gameObject);
-            sponer.enemysuu--;
-        }
-    }
 
-}
+    }
