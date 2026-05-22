@@ -29,14 +29,14 @@ public class sponer : MonoBehaviour
             Instantiate(enemy[0], new Vector2(Random.Range(8f, -8.5f), 9), transform.rotation);
             enemysuu++;
             timer = 0.0f;
-            enemysum++;
+           
         }
         if (Stimer < bosatk.sponetime - 15 &&enemysuu < 2)
         {
             Instantiate(enemy[0], new Vector2(Random.Range(8f, -8.5f), 9), transform.rotation);
             enemysuu++;
             timer = 0.0f;
-            enemysum++;
+           
         }
 
         //Instantiate(tama, ShotPoint.position, ShotPoint.rotation);

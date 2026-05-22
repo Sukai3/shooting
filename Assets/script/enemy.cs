@@ -54,7 +54,10 @@ public class enemy : MonoBehaviour
         if (kill)
             killtimer += Time.deltaTime;
         if (killtimer >= killtime)
+        {
+            sponer.enemysum++;
             Destroy(gameObject);
+        }
             if (transform.position.y >= gendo)
             transform.Translate(new Vector3(0, -2, 0) * Time.deltaTime);
         else
