@@ -14,7 +14,7 @@ public class bosatk : MonoBehaviour
     public float time=0;
     public int pattern = 0;
     public float rnd;
-    public float HP = 300;
+    public float HP = 500;
     public float kakudo=0;
     public float sum=0;
     public static  bool kill=false;
