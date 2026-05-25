@@ -25,7 +25,8 @@ public class bosatk : MonoBehaviour
     {
         kill = false;
         sponetime = shokisponetime;
-       
+        pattern = Random.Range(0, Danmaku.Length);
+
     }
 
     // Update is called once per frame
