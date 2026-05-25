@@ -19,6 +19,7 @@ public class bosatk : MonoBehaviour
     public float sum=0;
     public static  bool kill=false;
     public int Maxpattern;
+    private float count=1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -53,6 +54,7 @@ public class bosatk : MonoBehaviour
             if (Ptimer > Ptime&&!kyukei) 
             {
                 Ptimer = 0;
+                count = 1;
                 pattern = -1;
                 kyukei = true;
             }
@@ -65,25 +67,28 @@ public class bosatk : MonoBehaviour
 
             if (time < timer && pattern == 0)
             {
+               
                 timer = 0;
                 time = 0.4f;
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(90f, 270f)));
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(90f, 270f)));
                 Instantiate(Danmaku[0], transform.position, Quaternion.Euler(0, 0, Random.Range(270, 450)));
             }
-            if (time < timer && pattern == 1)
+            if (time/count < timer && pattern == 1)
             {
                 timer = 0;
                 time = 3;
-                rnd = Random.Range(2.0f, -8.5f);
+                rnd = Random.Range(8.0f, -8.5f);
                 for (int i = 0; i <= 16; i++)
                 {
 
-                    Instantiate(Danmaku[1], new Vector2(rnd, 2f), Quaternion.Euler(0, 0, i * 22.5f));
+                    Instantiate(Danmaku[1], new Vector2(rnd, 4f), Quaternion.Euler(0, 0, i * 22.5f));
                 }
+                count+=0.5f;
             }
             if (time < timer && pattern == 2)
             {
+              
                 timer = 0;
                 time = 0.2f;
                 Instantiate(Danmaku[2], new Vector2(Random.Range(-8.0f, 8.0f), 5f), transform.rotation);
@@ -92,8 +97,9 @@ public class bosatk : MonoBehaviour
             }
             if (time < timer && pattern == 3)
             {
+                
                 timer = 0;
-                time = 1f;
+                time = 1.5f;
                 Instantiate(Danmaku[3], transform.position, Quaternion.Euler(0, 0,0));
 
 

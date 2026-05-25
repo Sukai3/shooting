@@ -24,6 +24,10 @@ public class destroy : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("Bom"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision) 
     {
@@ -32,6 +36,10 @@ public class destroy : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Tama"))
+        {
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Bom"))
         {
             Destroy(collision.gameObject);
         }

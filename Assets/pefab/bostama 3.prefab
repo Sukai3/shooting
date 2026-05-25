@@ -181,4 +181,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::bossdanmaku
   xspeed: 0
   yspeed: 5
-  time: 15
+  time: 12

@@ -6,7 +6,7 @@ public class haikei : MonoBehaviour
     public Transform[] basho;
     public int bangou;
     public int jougenn;
-    public bool infinity=false;
+    public bool owari=false;
     public bool kurayami=false;
     public GameObject kakusi;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,18 +24,25 @@ public class haikei : MonoBehaviour
             {
                 yami.key = true;
             }
-        if (transform.position.y >= -11.8f)
+            if (transform.position.y >= 0f && owari)
+            {
+
+                transform.Translate(new Vector3(0, speed, 0) * Time.deltaTime);
+            }
+        
+
+        if (transform.position.y >= -11.8f&&!owari)
             {
                 
                 transform.Translate(new Vector3(0, speed, 0) * Time.deltaTime);
             }
         }
-        if (transform.position.y <= -10.8f && statichaikei.kaisuu >= jougenn && !infinity)
+        if (transform.position.y <= -10.8f && statichaikei.kaisuu >= jougenn && !owari)
         {
             statichaikei.kaisuu++;
             Destroy(gameObject);
         }
-        if (transform.position.y <= -10.8f&&statichaikei.kaisuu>=bangou) 
+        if (transform.position.y <= -10.8f&&statichaikei.kaisuu>=bangou&&!owari) 
         {
            
                 statichaikei.kaisuu ++;
