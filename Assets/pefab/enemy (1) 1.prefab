@@ -191,6 +191,8 @@ MonoBehaviour:
   - {fileID: 5734495077173155687, guid: b10a0971fcebfb146970dc567b07daf7, type: 3}
   pattern: 0
   sound1: {fileID: 8300000, guid: 0562ba5e6144d6344b31beab59b78b3c, type: 3}
+  sound2: {fileID: 0}
+  sound3: {fileID: 8300000, guid: 5b55b46023bf14b4bb1c4884f88ab5b4, type: 3}
   rand: 0
 --- !u!82 &-6815522417142962468
 AudioSource:

@@ -2105,11 +2105,11 @@ MonoBehaviour:
   bominterval: 7
   cost: 2
   costpl: 1
-  sound1: {fileID: 8300000, guid: 0a32dc00d23452e4a83644b8d8e3254b, type: 3}
+  sound1: {fileID: 0}
   sound2: {fileID: 8300000, guid: 524d3d410b86acb49973f0d41f554190, type: 3}
-  sound3: {fileID: 8300000, guid: 5b55b46023bf14b4bb1c4884f88ab5b4, type: 3}
+  sound3: {fileID: 8300000, guid: 05c582865177a94468017baf2508d9b0, type: 3}
   sound4: {fileID: 8300000, guid: 994a5f57101f08640a73d4ffaa660c03, type: 3}
-  sound5: {fileID: 0}
+  sound5: {fileID: 8300000, guid: 0a32dc00d23452e4a83644b8d8e3254b, type: 3}
   sound6: {fileID: 0}
   hozonintrval: 1
 --- !u!50 &1123856993

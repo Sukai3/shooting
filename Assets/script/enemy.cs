@@ -14,10 +14,12 @@ public class enemy : MonoBehaviour
     public int pattern=0;
    
     public AudioClip sound1;
+    public AudioClip sound2;
+    public AudioClip sound3;
     AudioSource audioSource;
     public int rand;
     private float killtimer = 0.0f;
-    private float killtime = 3.0f;
+    public float killtime = 3.0f;
     private bool kill = false;
     //public GameObject item;
     private Animator anim;
@@ -45,9 +47,15 @@ public class enemy : MonoBehaviour
             audioSource.PlayOneShot(sound1);
 
             if (rand >= 4)
+            {
+                audioSource.PlayOneShot(sound3);
                 player.bunnsinn += 1;
+            }
             else if (rand >= 2)
+            {
+                audioSource.PlayOneShot(sound3);
                 player.bunnsinn += 2;
+            }
             sponer.enemysuu--;
             //Instantiate(item, transform.position, transform.rotation);
         }
@@ -110,6 +118,10 @@ public class enemy : MonoBehaviour
                 HP -= player.atk;
                 anim.SetTrigger("hidan");
                 Destroy(collision.gameObject);
+                if (HP <= 0)
+                {
+                    audioSource.PlayOneShot(sound2);
+                }
             }
             if (collision.gameObject.CompareTag("Bom"))
             {
@@ -130,9 +142,14 @@ public class enemy : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Tama"))
             {
+               
                 HP -= player.atk;
                 anim.SetTrigger("hidan");
                 Destroy(collision.gameObject);
+                if (HP <= 0)
+                {
+                    audioSource.PlayOneShot(sound2);
+                }
             }
             if (collision.gameObject.CompareTag("Bom"))
             {
