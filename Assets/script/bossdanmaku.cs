@@ -18,11 +18,11 @@ public class bossdanmaku : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > time)
-            Destroy(gameObject);
-        transform.Translate(new Vector3(xspeed, yspeed, 0) * Time.deltaTime);
+       // if (timer > time)
+           // Destroy(gameObject);
+        transform.Translate(new Vector3(xspeed, yspeed+timer/5, 0) * Time.deltaTime);
 
-        if (transform.position.y < -4.5)
+        if (transform.position.y < -4.5&&timer < time)
         {
             // transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             transform.position = new Vector2(transform.position.x, -4.5f);
@@ -30,7 +30,7 @@ public class bossdanmaku : MonoBehaviour
                 rota = rota - rota + 180 - rota;
             transform.rotation = Quaternion.Euler(0, 0, rota);
         }
-        if (transform.position.y > 4.5)
+        if (transform.position.y > 4.5 && timer < time)
         {
             // transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             transform.position = new Vector2(transform.position.x, 4.5f);
@@ -38,7 +38,7 @@ public class bossdanmaku : MonoBehaviour
                 rota = rota - rota + 180 - rota;
             transform.rotation = Quaternion.Euler(0, 0, rota);
         }
-        if (transform.position.x < -8.4)
+        if (transform.position.x < -8.4 && timer < time)
         {
             // transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             transform.position = new Vector2(-8.4f, transform.position.y);
@@ -46,7 +46,7 @@ public class bossdanmaku : MonoBehaviour
                 rota *= -1;
             transform.rotation = Quaternion.Euler(0, 0, rota);
         }
-        if (transform.position.x > 8.3)
+        if (transform.position.x > 8.3 && timer < time)
         {
             // transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             transform.position = new Vector2(8.3f, transform.position.y);

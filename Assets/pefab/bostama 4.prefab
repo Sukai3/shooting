@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 406905401131720421}
   - component: {fileID: -9043395572880698794}
   m_Layer: 0
-  m_Name: bostama 2
+  m_Name: bostama 4
   m_TagString: ETama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.46, y: 2.81, z: 0}
-  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::tama
   xspeed: 0
-  yspeed: -4.57
+  yspeed: 2.45
   pxspeed: 0
   pyspeed: 0
   playermuke: 1
@@ -173,7 +173,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.38
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

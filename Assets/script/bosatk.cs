@@ -14,12 +14,14 @@ public class bosatk : MonoBehaviour
     public float time=0;
     public int pattern = 0;
     public float rnd;
-    public float HP = 500;
+    public float HP = 600;
     public float kakudo=0;
     public float sum=0;
     public static  bool kill=false;
     public int Maxpattern;
     private float count=1;
+    int i = 0;
+    public GameObject[] gage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,8 +37,7 @@ public class bosatk : MonoBehaviour
     {
         timer += Time.deltaTime;
         Stimer += Time.deltaTime;
-      
-        if (HP <= 0)
+        
         {
            Destroy(gameObject);
            kill=true;
@@ -55,6 +56,7 @@ public class bosatk : MonoBehaviour
             {
                 Ptimer = 0;
                 count = 1;
+                i = 0;
                 pattern = -1;
                 kyukei = true;
             }
@@ -104,7 +106,18 @@ public class bosatk : MonoBehaviour
 
 
             }
+            if (time < timer && pattern == 4)
+            {
+                timer = 0;
+                time = 0.1f; ;
 
+                i += 17;
+
+                    Instantiate(Danmaku[1], transform.position, Quaternion.Euler(0, 0, i));
+                Instantiate(Danmaku[1], transform.position, Quaternion.Euler(0, 0, i+180));
+
+
+            }
         }
     }
             private void OnTriggerEnter2D(Collider2D collision)
