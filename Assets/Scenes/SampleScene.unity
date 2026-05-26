@@ -3539,6 +3539,7 @@ MonoBehaviour:
   - {fileID: 5734495077173155687, guid: 6b5fb9e009f2021489a827ba127d599c, type: 3}
   - {fileID: 5734495077173155687, guid: 12a9e3280d4537047a8aeb3ac0c750e0, type: 3}
   - {fileID: 5734495077173155687, guid: 9d1cce1e70d03b144bdacd2e92409fc5, type: 3}
+  - {fileID: 5734495077173155687, guid: 8ea1c51567d3e354980105a6bc4d5453, type: 3}
   Ptime: 10
   Utime: 2.08
   kyukei: 0
@@ -3550,6 +3551,7 @@ MonoBehaviour:
   kakudo: 0
   sum: 0
   Maxpattern: 2
+  gage: []
 --- !u!50 &2027467373
 Rigidbody2D:
   serializedVersion: 5
