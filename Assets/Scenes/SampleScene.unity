@@ -166,6 +166,7 @@ MonoBehaviour:
   enemy:
   - {fileID: 6920831386319245031, guid: a4cee7b1c2cf0de4c8b73a15ddf375f4, type: 3}
   - {fileID: 6920831386319245031, guid: cee73863e8ac82b4a87f836bdf7781c9, type: 3}
+  - {fileID: 9148107407365822125, guid: 98213d963d17fb94e9b918b883e0b801, type: 3}
   timer: 0
   Stimer: 0
   time: 5
@@ -3546,12 +3547,14 @@ MonoBehaviour:
   shokisponetime: 84.4
   time: 0.1
   pattern: 0
+  pattern2: 0
   rnd: 0
   HP: 100
   kakudo: 0
   sum: 0
   Maxpattern: 2
   gage: []
+  time2: 10.65
 --- !u!50 &2027467373
 Rigidbody2D:
   serializedVersion: 5
