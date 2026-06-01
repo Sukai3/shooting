@@ -19,6 +19,7 @@ public class player : MonoBehaviour
     public int kyokasuu = 0;
     public float time =1.0f;
     public static float atk=1;
+    private float atkkousin=1;
     public static int bunnsinn = 0;
     public TextMeshProUGUI textMeshPro;
     public float interval = 1;
@@ -39,6 +40,9 @@ public class player : MonoBehaviour
     private float killtimer = 0.0f;
     private float killtime = 3.0f;
     public float hozonintrval;
+    public static int bunnsinnsum;
+    public static int usebunnsinn;
+
     
     void Start()
     {
@@ -50,6 +54,8 @@ public class player : MonoBehaviour
         atk = 1;
         bunnsinn = 5;
         bomdamage = 10;
+        bunnsinnsum=5;
+        usebunnsinn=0;
     }
 
     // Update is called once per frame
@@ -81,6 +87,7 @@ public class player : MonoBehaviour
             if (kougo == 0)
             {
                 kougo++;
+                atkkousin++;
                 atk++;
             }
             else
@@ -89,6 +96,10 @@ public class player : MonoBehaviour
                 interval += 0.4f;
                 shokiintrval += 0.4f;
             }
+            if (!bosatk.bosstime)
+                bosatk.MAXHP += 60;
+            else if (bosatk.bosstime)
+                bosatk.MAXHP += 40;
             cost += costpl;
         }
         else if (Input.GetKeyDown(KeyCode.B)&&bunnsinn>=cost&&kyokasuu<6)
@@ -107,18 +118,29 @@ public class player : MonoBehaviour
                 kougo=0;
                 interval += 0.4f;
             }
+            if (!bosatk.bosstime)
+                bosatk.MAXHP += 60;
+            else if (bosatk.bosstime)
+                bosatk.MAXHP += 40;
+
             cost += costpl;
         }
         if (kyokatimer >= kyokatime) 
         {
             kyokasuu = 0;
-            atk = 1;
+            atk = atkkousin;
             interval = shokiintrval;
         }
         if (Input.GetKeyDown(KeyCode.K))
+        {
             bunnsinn -= 6;
+            bunnsinnsum -= 6;
+        }
         if (Input.GetKeyDown(KeyCode.J))
+        {
             bunnsinn += 6;
+            bunnsinnsum += 6;
+        }
     }
 
 
@@ -140,7 +162,7 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ETama"))
         {
-            if (bunnsinn <= 0)
+            if (bunnsinn <= 0&&!bosatk.kill)
             {
                 audioSource.PlayOneShot(sound2);
                 SceneManager.LoadScene(i);
@@ -149,14 +171,15 @@ public class player : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(sound3);
-                bunnsinn--;
+                if (!bosatk.kill)
+                    bunnsinn--;
                 Destroy(collision.gameObject);
             }
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
-            if (bunnsinn <= 0)
+            if (bunnsinn <= 0&&!bosatk.kill)
             {
                 audioSource.PlayOneShot(sound2);
                 SceneManager.LoadScene(i);
@@ -165,6 +188,7 @@ public class player : MonoBehaviour
             else
             {
                 audioSource.PlayOneShot(sound3);
+                if(!bosatk.kill)
                 bunnsinn--;
                 sponer.enemysuu--;
                 Destroy(collision.gameObject);

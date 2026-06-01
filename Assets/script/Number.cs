@@ -23,16 +23,16 @@ public class Number : MonoBehaviour
         switch (D)
         {
             case 1:
-                one = player.bunnsinn % 10;
-                ten = (player.bunnsinn / 10) % 10;
-                hund = (player.bunnsinn / 100) % 10;
-                thou = (player.bunnsinn / 1000) % 10;
+                one = player.bunnsinnsum % 10;
+                ten = (player.bunnsinnsum / 10) % 10;
+                hund = (player.bunnsinnsum / 100) % 10;
+                thou = (player.bunnsinnsum / 1000) % 10;
                 break;
             case 2:
-                one = sponer.enemysum % 10;
-                ten = (sponer.enemysum / 10) % 10;
-                hund = (sponer.enemysum / 100) % 10;
-                thou = (sponer.enemysum / 1000) % 10;
+                one = (player.bunnsinnsum-player.bunnsinn) % 10;
+                ten = ((player.bunnsinnsum - player.bunnsinn) / 10) % 10;
+                hund = ((player.bunnsinnsum - player.bunnsinn) / 100) % 10;
+                thou = ((player.bunnsinnsum - player.bunnsinn) / 1000) % 10;
                 break;
             case 3:
 

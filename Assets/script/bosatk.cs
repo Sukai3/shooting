@@ -15,7 +15,9 @@ public class bosatk : MonoBehaviour
     public int pattern = 0;
     public int pattern2 = -10;
     public float rnd;
-    public float HP = 600;
+    public static float MAXHP = 700;
+    public static float HP=100;
+    public float kakuninhp;
     public float kakudo=0;
     public float sum=0;
     public static  bool kill=false;
@@ -25,9 +27,13 @@ public class bosatk : MonoBehaviour
     public GameObject[] gage;
     private float timer2 = 0.0f;
     public float time2 = 0;
+    public static bool bosstime=false;
+    int a = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        MAXHP = 300;
+        bosstime = false;
         kill = false;
         sponetime = shokisponetime;
         pattern = Random.Range(0, Danmaku.Length);
@@ -37,6 +43,7 @@ public class bosatk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        kakuninhp = HP;
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
         Stimer += Time.deltaTime;
@@ -48,8 +55,14 @@ public class bosatk : MonoBehaviour
        
         if (Stimer >= sponetime)
         {
+            bosstime=true;
             if (transform.position.y >= 2.57)
                 transform.Translate(new Vector3(0, -2, 0) * Time.deltaTime);
+        }
+        if (bosstime&&a==0) 
+        {
+            HP=MAXHP;
+            a++;
         }
         if (transform.position.y <= 4)
         {
@@ -127,8 +140,8 @@ public class bosatk : MonoBehaviour
                 
                 i += 17;
 
-                    Instantiate(Danmaku[1], transform.position, Quaternion.Euler(0, 0, i));
-                Instantiate(Danmaku[1], transform.position, Quaternion.Euler(0, 0, i+180));
+                    Instantiate(Danmaku[4], transform.position, Quaternion.Euler(0, 0, i));
+                Instantiate(Danmaku[4], transform.position, Quaternion.Euler(0, 0, i+180));
 
 
             }

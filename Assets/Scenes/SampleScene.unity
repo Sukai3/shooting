@@ -3549,7 +3549,7 @@ MonoBehaviour:
   pattern: 0
   pattern2: 0
   rnd: 0
-  HP: 100
+  kakuninhp: 0
   kakudo: 0
   sum: 0
   Maxpattern: 2

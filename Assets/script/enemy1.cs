@@ -55,11 +55,13 @@ public class enemy1 : MonoBehaviour
             {
                 audioSource.PlayOneShot(sound3);
                 player.bunnsinn += 1;
+                player.bunnsinnsum += 1;
             }
             else if (rand >= 2)
             {
                 audioSource.PlayOneShot(sound3);
                 player.bunnsinn += 2;
+                player.bunnsinnsum += 2;
             }
             sponer.enemysuu--;
             //Instantiate(item, transform.position, transform.rotation);
